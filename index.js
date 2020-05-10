@@ -11,7 +11,7 @@ import TimSort from './lib/TimSort.js'
 import CountingSort from './lib/CountingSort'
 import BucketSort from './lib/BucketSort'
 import { randomArr } from './mock/arr.js'
-let len = 10
+let len = 100000
 let joinLen = 20
 let arr = randomArr(len)
 let sort = [CombSort, BubbleSort, HeapSort, MergeSort, QuickSort, InsertSort, IntroSort, TimSort, CountingSort, BucketSort]
@@ -23,6 +23,6 @@ sort.map(fn => {
   let res = fn(arr)
   let {name, count, result, O} = res
   // ${result}
-  console.log(`${name} ${O?O: ''} (${count}) ${result}`)
+  console.log(`${name} ${O?O: ''} (${count})`)
   console.log('%s \n', endJoin)
 })
